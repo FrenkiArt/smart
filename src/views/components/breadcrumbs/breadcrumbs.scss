@@ -1,0 +1,16 @@
+// src/views/components/breadcrumbs/breadcrumbs.scss
+@import '../../../assets/styles/utils/variables';
+
+.breadcrumbs {
+  li {
+    &:last-child {
+      a {
+        position: relative;
+      }
+    }
+  }
+
+  a {
+    position: relative;
+  }
+}

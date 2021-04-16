@@ -1,0 +1,20 @@
+//- src/views/components/buttons/button.pug
+|
+|
+mixin btn(args)
+  button(
+    type=args.type ? args.type : 'button'
+    class=args.class ? args.class : 'btn'
+    disabled=args.disabled ? args.disabled : null
+    data-popup=args.popup ? args.popup : null
+  )
+    span=args.text
+|
+|
+//-+btn({
+    type: 'button',
+    class: 'btn--rotate',
+    text: 'Получить данные',
+    data-popup: '.selector',
+    disabled: null
+  })
