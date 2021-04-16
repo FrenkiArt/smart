@@ -1,0 +1,151 @@
+extends ../templates/_template.pug
+
+block title
+  title Заголовок
+
+block basicSeo
+  meta(name='description' content='Описание страницы')
+  meta(name='keywords', content='')
+  meta(name='author' content='')
+
+block content
+  |
+  | 
+  .wrap-main
+    |
+    |
+    .container
+      | 
+      | 
+      .lottery
+        |
+        |
+        .lottery__header 
+          .lottery__title Lottery
+          .lottery__hint 
+            span.title How it work?
+            ul.hint-content 
+              li 2% of all deposits go to the total lottery pot  
+              li After each deposit made you automatically become a participant   
+              li in the lottery and receive tickets 0.05 BNB = 1 ticket
+              li Maximum 100 tickets for 1 deposit
+              li Every 24 hours the contract randomly selects 5 lucky tickets
+              li The total pot is divided between 5 participants who have these tickets
+        |
+        |
+        .lottery__toggler 
+          .uni-toggler.uni-toggler--1
+            .uni-toggler__item NEXT DRAW
+            .uni-toggler__item PAST DRAWS
+            .uni-toggler__text-filler Oops! You haven't made any deposits!
+        |
+        |
+        .lottery__round 
+          span Round 
+          span.orange 25
+        |
+        |
+        ul.lottery__pots
+          li.pot
+            .pot__title Total Pot
+            .pot__cart 
+              .number 12.340
+              span.bnb BNB
+          li.pot
+            .pot__title Total Tickets
+            .pot__cart.bg-orange
+              .number.white 9324 
+          li.pot
+            .pot__title Your Tickets
+            .pot__cart.bg-white
+              .number 257 - 289  
+              span (116) 
+              .arr=">"
+          li.pot
+            .pot__title Round Participants
+            .pot__cart.bg-lightblue
+              .number.blue 1 953 
+          li.pot
+            .pot__title Your chance
+            .pot__cart.bg-green
+              .number.green 2.95%
+        |
+        |
+        .your-stats
+          |
+          |
+          .your-stats__title Your stats
+          |
+          |
+          ul.stats-list 
+            |
+            |
+            li.stat-cart
+              .stat-cart__title Participation in rounds
+              .stat-cart__count.blue 3
+            |
+            |
+            li.stat-cart
+              .stat-cart__title Total tickets received
+              .stat-cart__count 289 
+            |
+            |
+            li.stat-cart
+              .stat-cart__title Round wins
+              .stat-cart__count.green 1  
+            |
+            |  
+            li.stat-cart
+              .stat-cart__title Earned on winnings
+              .stat-cart__count 25.68
+              span.bnb BNB
+            |
+            |  
+          |
+          |
+        |
+        |
+        .alt-carts
+          .alt-cart
+            .alt-cart__green 5245
+            .alt-cart__range 257 - 289
+            .alt-cart__percent 15.64%
+            .alt-cart__count 
+              span 2.468 
+              span.bnb BNB
+          .alt-cart
+            .alt-cart__green 21
+            .alt-cart__range 18 - 152
+            .alt-cart__percent 15.64%
+            .alt-cart__count 
+              span 2.468 
+              span.bnb BNB
+          .alt-cart
+            .alt-cart__green 1770
+            .alt-cart__range 1263 - 1890
+            .alt-cart__percent 15.64%
+            .alt-cart__count 
+              span 2.468 
+              span.bnb BNB
+          .alt-cart
+            .alt-cart__green 5
+            .alt-cart__range 1 - 64
+            .alt-cart__percent 15.64%
+            .alt-cart__count 
+              span 2.468 
+              span.bnb BNB
+          .alt-cart
+            .alt-cart__green 3223
+            .alt-cart__range 3198 - 3356
+            .alt-cart__percent 15.64%
+            .alt-cart__count 
+              span 2.468 
+              span.bnb BNB
+        |
+        |
+      |
+      |  
+    |
+    | 
+  |
+  |  

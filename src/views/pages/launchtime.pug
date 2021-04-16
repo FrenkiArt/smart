@@ -1,0 +1,64 @@
+extends ../templates/_template.pug
+
+block title
+  title Заголовок
+
+block basicSeo
+  meta(name='description' content='Описание страницы')
+  meta(name='keywords', content='')
+  meta(name='author' content='')
+
+block content
+  |
+  | 
+  .wrap-main
+    |
+    |
+    .container
+      |
+      |
+      //- Desktop page
+      h1 Launchtime
+      |
+      | 
+      .launchtime__title
+        span.green Start
+        span.black in
+      |
+      |
+      .launchtime__counter 
+      |
+      |
+      .block-info
+        |
+        |
+        img(src="assets/svg/icon_close.svg", alt="" loading="lazy").block-info__img 
+        |
+        |
+        .block-info__title Binance Smart Chain Error
+        |
+        |
+        .block-text 
+          span You must select 
+          span Binance Smart Chain Mainnet in MetaMask
+          
+        |
+        |
+        .block-info__btns 
+          a(href="#").btn--gray 
+            span How to connect?
+          a(href="#").btn--gray 
+            span Support
+        |
+        |
+      |
+      |  
+    |
+    | 
+  |
+  |
+  //-<svg width="12" height="16">
+  //-  <use xlink:href="./assets/svg/svg_sprite.svg#geo"></use>
+  //-</svg>
+  |
+  |

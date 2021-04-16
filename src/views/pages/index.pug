@@ -21,9 +21,122 @@ block content
       h1 Начальная страница 
       |
       |
-      include ../components/breadcrumbs/breadcrumbs.pug
+      .title 
+        | Deposit 
+        span.bnb BNB 
+        | and earn daily ROI
       |
       |  
+      .simple-carts 
+        |
+        |
+        .simple-cart 
+          .simple-cart__row
+            .simple-cart__count 21 880
+            span.bnb BNB
+          .simple-cart__row
+            span.orange Total 
+            | Invested 
+            span.green ~ $8 095 612
+        .simple-cart 
+          .simple-cart__row
+            .simple-cart__count 16 636
+            span.bnb BNB
+          .simple-cart__row
+            span.orange Contract 
+            | Balance 
+            span.green $ 1 221 520
+        .simple-cart  
+          .simple-cart__row
+            .simple-cart__count 16 636
+            span.bnb BNB
+          .simple-cart__row
+            span.orange Active 
+            | users 
+            span.blue +128 new in 24h
+        |
+        |
+      |
+      |
+      .calc-profit
+      |
+      |
+      .dashboard
+        .dashboard__title Dashboard
+        .dashboard__big-cart 
+          .title Withdrawable
+          .body 
+            span.count 0.038835
+            span.bnb BNB
+          .green $ 122
+          .text To maintain the stability of the system, we ask participants to reinvest part of the profits, this will help the project to bring profit for all users much longer
+          button.btn--gray.btn--big Withdraw
+        .dashboard__carts-list 
+          .dashboard__cart
+            .title Now in deposits
+            .body 
+              span.count 5
+              span.bnb BNB
+          .dashboard__cart
+            .title Total Invested
+            .body 
+              span.count 50
+              span.bnb BNB
+          .dashboard__cart
+            .title Total Earned
+            .body 
+              span.count 25.265
+              span.bnb BNB
+          .dashboard__cart
+            .title Total Withdrawn
+            .body 
+              span.count 25.383
+              span.bnb BNB
+      |
+      |
+      .uni-toggler.uni-toggler--2
+        .uni-toggler__item ACTIVE DEPOSITS
+        .uni-toggler__item ENDED DEPOSITS 
+        .uni-toggler__text-filler Oops! You haven't made any deposits!
+      |
+      |
+      .deposits-list 
+        .deposit-cart
+          .deposit-cart__number 14
+          .deposit-cart__date 10 DAYS, 21.03.2021 - 31.03.2021
+          .deposit-cart__depo 
+            | Deposit: 100 BNB  
+            span.green 16%
+          .deposit-cart__active
+            label
+              input(type="checkbox", name="")
+              span Capitalizacion of interest
+              .icon 
+                svg
+            a(href="#") Cansel deposit 
+          .deposit-cart__summs 
+            .summ 
+              | 5.290
+              span.bnb BNB
+            .summ 
+              | 523 BNB
+              span.bnb BNB
+          .deposit-cart__line 
+            .filler.filler--orange
+            .filler.filler--green
+          .popup-sure
+            .popup-sure__text 
+              | You can terminate this deposit 
+              br
+              | 80% of the deposit will be returned for withdrawal
+            .popup-sure__title Are you sure?
+            .popup-sure__btns
+              button.btn--red 
+                span No
+              button.btn--green 
+                span Yes
+      |
+      |
     |
     | 
   |

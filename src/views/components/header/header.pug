@@ -1,18 +1,44 @@
 //- src/views/components/header/header.pug
 |
 |
-header.header
+header#header.header
   |
   |
-  .container
-    h3 Здесь Хедер
+  .header__left
+    a(href="./" title="Главная").logo
+      img(src="assets/svg/logo.svg", alt="" loading="lazy")
   |
   |
-  //-a(href="./" title="Главная").logo
-    img(src="assets/svg/logo.svg", alt="" loading="lazy")
+  .header__center 
+    .header__left
+      a(href="#") Support
+      a(href="#") Help
+      .presentation 
+        a(href="#") 111 
+        a(href="#") 222 
+        a(href="#") 333 
+      .exchange-rate
+    .header__right
+      .language 
+      .social
   |
   |
-  include ./headerMenu
+  .header__right
+    .avatar 
+      .avatar__number
+      .avatar__btn
+      .avatar__wrap-img 
+        svg
+        //img(src="assets/images/avatar", alt="" loading="lazy").avatar__img
+  |
+  | 
+|
+|
+nav.navigation 
+  |
+  |
+  .container 
+    include ./headerMenu.pug
   |
   |
 |
