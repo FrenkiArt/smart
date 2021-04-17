@@ -23,6 +23,7 @@ import './views/components/tabs/tabs.scss';
 import './views/components/tabs/tabs.js';
 import './views/components/cart/cart.scss';
 import './views/components/cart/cart.js';
+import './views/components/referral-panel/referral-panel.scss';
 import './views/components/pagination/pagination.scss';
 import './views/components/popup/popup.scss';
 import {myPopup} from './views/components/popup/popup.js';
@@ -35,10 +36,3 @@ import './views/mixins/mixins.scss';
 if (document.querySelector('[data-popup]')) {
   myPopup(document.querySelectorAll('[data-popup]'));
 }
-
-const customJsScript = document.createElement('script');
-customJsScript.type = 'text/javascript';
-customJsScript.defer = true;
-customJsScript.src = './assets/js/custom-js.js';
-
-document.body.appendChild(customJsScript);

@@ -1,4 +1,4 @@
-extends ../templates/_template.pug
+extends ../templates/_referral.pug
 
 block title
   title Заголовок
@@ -15,21 +15,12 @@ block content
     |
     |
     .container
-      |
-      |
-      //- Desktop page
-      h1 Referral panel
-      |
       | 
-
+      | 
+      include ../components/referral-panel/referral-panel.pug
       |
       |  
     |
     | 
   |
-  |
-  //-<svg width="12" height="16">
-  //-  <use xlink:href="./assets/svg/svg_sprite.svg#geo"></use>
-  //-</svg>
-  |
-  |
+  |  

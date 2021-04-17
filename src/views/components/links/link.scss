@@ -5,11 +5,30 @@
 .link {
   position: relative;
   text-decoration: none;
-  color: $color-primary-green;
+  background-color: #eff2f5;
+  border-radius: 6px;
   transition: all 0.3s;
+  color: #58667e;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  display: inline-flex;
+  padding: 5px 15px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  svg {
+    fill: #58667e;
+  }
 
   &:hover {
-    text-decoration: underline;
+    color: #ff5b23;
+
+    svg {
+      fill: #ff5b23;
+    }
   }
 }
 
@@ -17,6 +36,67 @@
   @extend .link;
 
   color: #e93745;
+}
+
+.link--icon-right {
+  @extend .link;
+
+  .icon {
+    margin-left: 8px;
+  }
+}
+
+.link--icon-left {
+  @extend .link;
+
+  .icon {
+    margin-right: 8px;
+  }
+}
+
+.link--orange {
+  @extend .link;
+  background-color: transparent;
+
+  // .link__text
+  .link__text {
+    transform: translate(0, -1px);
+  }
+
+  .big-icon {
+    margin-right: 10px;
+    fill: #ff5b23;
+  }
+
+  color: #ff5b23;
+
+  .icon {
+    margin-left: 8px;
+    fill: #ff5b23;
+  }
+}
+
+.link--fill-orange {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 130px;
+  height: 46px;
+  background-color: #ff5b23;
+  box-shadow: 0px 4px 20px rgba(255, 91, 35, 0.4);
+  border-radius: 8px;
+  transition: all 0.3s;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid #ff5b23;
+
+  &:hover {
+    background-color: #fff;
+    color: #ff5b23;
+  }
 }
 
 .link--transparent {

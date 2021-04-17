@@ -3,6 +3,36 @@
 
 .footer {
   position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #58667e;
+  padding: 25px 0 50px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .copyright {
+    text-align: left;
+  }
+
+  .audited {
+    text-align: center;
+  }
+
+  .powered {
+    text-align: right;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 /*

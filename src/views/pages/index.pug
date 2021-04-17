@@ -16,44 +16,67 @@ block content
     |
     .container
       |
-      |
-      //- Desktop page
-      h1 Начальная страница 
-      |
-      |
-      .title 
+      | 
+      .uni-title 
         | Deposit 
         span.bnb BNB 
         | and earn daily ROI
+      |
+      |
+      .row-btns
+        a(href="#").link--fill-orange Adress
+        a(href="#").link--fill-orange Audit
       |
       |  
       .simple-carts 
         |
         |
         .simple-cart 
+          |
+          |
           .simple-cart__row
-            .simple-cart__count 21 880
+            span.simple-cart__count 21 880 
             span.bnb BNB
+          |
+          |
           .simple-cart__row
             span.orange Total 
             | Invested 
             span.green ~ $8 095 612
+          |
+          |
+        |
+        |
         .simple-cart 
+          |
+          |
           .simple-cart__row
-            .simple-cart__count 16 636
+            span.simple-cart__count 16 636 
             span.bnb BNB
+          |
+          |
           .simple-cart__row
             span.orange Contract 
             | Balance 
             span.green $ 1 221 520
+          |
+          |
+        |
+        |
         .simple-cart  
+          |
+          |
           .simple-cart__row
-            .simple-cart__count 16 636
+            span.simple-cart__count 16 636 
             span.bnb BNB
+          |
+          |
           .simple-cart__row
             span.orange Active 
             | users 
             span.blue +128 new in 24h
+          |
+          |
         |
         |
       |
@@ -63,41 +86,86 @@ block content
       |
       .dashboard
         .dashboard__title Dashboard
-        .dashboard__big-cart 
-          .title Withdrawable
-          .body 
-            span.count 0.038835
-            span.bnb BNB
-          .green $ 122
-          .text To maintain the stability of the system, we ask participants to reinvest part of the profits, this will help the project to bring profit for all users much longer
-          button.btn--gray.btn--big Withdraw
-        .dashboard__carts-list 
-          .dashboard__cart
-            .title Now in deposits
+        .dashboard__body
+          .dashboard__big-cart 
+            .title Withdrawable
             .body 
-              span.count 5
+              span.count 0.038835 
               span.bnb BNB
-          .dashboard__cart
-            .title Total Invested
-            .body 
-              span.count 50
+            .green $ 122
+            .text To maintain the stability of the system, we ask participants to reinvest part of the profits, this will help the project to bring profit for all users much longer
+            button.big-btn Withdraw
+          |
+          |
+          ul.stats-list 
+            |
+            | 
+            li.stat-cart
+              .stat-cart__title Now in deposits
+              span.stat-cart__count 5 
               span.bnb BNB
-          .dashboard__cart
-            .title Total Earned
-            .body 
-              span.count 25.265
+            |
+            | 
+            li.stat-cart
+              .stat-cart__title Total Invested
+              span.stat-cart__count 50 
               span.bnb BNB
-          .dashboard__cart
-            .title Total Withdrawn
-            .body 
-              span.count 25.383
+            |
+            | 
+            li.stat-cart
+              .stat-cart__title Total Earned
+              span.stat-cart__count 25.265 
               span.bnb BNB
+            |
+            | 
+            li.stat-cart
+              .stat-cart__title Total Withdrawn
+              span.stat-cart__count 25.383 
+              span.bnb BNB
+            |
+            |
+          |
+          |
+          //.dashboard__carts-list 
+            .dashboard__cart
+              .title Now in deposits
+              .body 
+                span.count 5
+                span.bnb BNB
+            .dashboard__cart
+              .title Total Invested
+              .body 
+                span.count 50
+                span.bnb BNB
+            .dashboard__cart
+              .title Total Earned
+              .body 
+                span.count 25.265
+                span.bnb BNB
+            .dashboard__cart
+              .title Total Withdrawn
+              .body 
+                span.count 25.383
+                span.bnb BNB
       |
       |
-      .uni-toggler.uni-toggler--2
-        .uni-toggler__item ACTIVE DEPOSITS
-        .uni-toggler__item ENDED DEPOSITS 
-        .uni-toggler__text-filler Oops! You haven't made any deposits!
+      .wrapper-uni-toggler
+        |
+        |
+        .uni-toggler.uni-toggler--2
+          |
+          |
+          .uni-toggler__item.active ACTIVE DEPOSITS
+          |
+          |
+          .uni-toggler__item ENDED DEPOSITS 
+          |
+          |
+          .uni-toggler__text-filler.dn Oops! You haven't made any deposits!
+          |
+          |
+        |
+        |
       |
       |
       .deposits-list 

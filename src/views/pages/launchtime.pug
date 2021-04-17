@@ -1,4 +1,4 @@
-extends ../templates/_template.pug
+extends ../templates/_launchtime.pug
 
 block title
   title Заголовок
@@ -15,40 +15,73 @@ block content
     |
     |
     .container
-      |
-      |
-      //- Desktop page
-      h1 Launchtime
-      |
+      | 
       | 
       .launchtime__title
-        span.green Start
+        span.green Start 
         span.black in
       |
       |
       .launchtime__counter 
+        |
+        |
+        .countdown(data-countdown="")
+          // example data-countdown="04/20/2021 06:00:07 PM"
+          |
+          |
+          #hours.countdown__hours
+            .countdown__number
+            .countdown__number
+          |
+          |
+          .countdown__dots
+            .dot
+            .dot
+          |
+          |
+          #minutes.countdown__minutes
+            .countdown__number
+            .countdown__number
+          |
+          |
+          .countdown__dots
+            .dot
+            .dot
+          |
+          |
+          #seconds.countdown__seconds 
+            .countdown__number
+            .countdown__number
+          |
+          |
       |
       |
-      .block-info
+      .launchtime__info 
         |
         |
-        img(src="assets/svg/icon_close.svg", alt="" loading="lazy").block-info__img 
-        |
-        |
-        .block-info__title Binance Smart Chain Error
-        |
-        |
-        .block-text 
-          span You must select 
-          span Binance Smart Chain Mainnet in MetaMask
-          
-        |
-        |
-        .block-info__btns 
-          a(href="#").btn--gray 
-            span How to connect?
-          a(href="#").btn--gray 
-            span Support
+        .block-info
+          |
+          |
+          img(src="assets/svg/icon_close.svg", alt="" loading="lazy").block-info__img 
+          |
+          |
+          .block-info__title Binance Smart Chain Error
+          |
+          |
+          .block-info__text 
+            span You must select 
+            br
+            span Binance Smart Chain Mainnet in MetaMask
+            
+          |
+          |
+          .block-info__btns 
+            a(href="#").link
+              span How to connect?
+            a(href="#").link 
+              span Support
+          |
+          |
         |
         |
       |
