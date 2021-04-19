@@ -1,0 +1,117 @@
+mixin deposit-cart()
+  |
+  |
+  .deposit-cart
+    |
+    |
+    .deposit-cart__number 14
+    |
+    |
+    .deposit-cart__date 10 DAYS, 21.03.2021 - 31.03.2021
+    |
+    |
+    .deposit-cart__depo 
+      | Deposit: 100 BNB  
+      span.green 16%
+    |
+    |
+    .deposit-cart__active
+      |
+      |
+      .deposit-cart__checkbox
+        +uni-checkbox({
+          classes: '',
+          text: 'Capitalizacion of interest'
+        })
+      |
+      |  
+      a(href="#").deposit-cart__cancel Cancel deposit 
+    |
+    |
+    .deposit-cart__summs 
+      .summ 
+        | 5.290 
+        span.bnb BNB
+      .summ 
+        | 523 
+        span.bnb BNB
+    |
+    |
+    .deposit-cart__line 
+      .filler.filler--orange.w-30
+    |
+    |
+    .popup-sure
+      .popup-sure__text 
+        | You can terminate this deposit 
+        br
+        | 80% of the deposit will be returned for withdrawal
+      .popup-sure__title Are you sure?
+      .popup-sure__btns
+        button.popup-sure__btn.btn-no 
+          span No
+        button.popup-sure__btn.btn-yes 
+          span Yes
+    |
+    |
+  |
+  |
+
+mixin deposit-cart-green()
+  |
+  |
+  .deposit-cart
+    |
+    |
+    .deposit-cart__number 14
+    |
+    |
+    .deposit-cart__date 10 DAYS, 21.03.2021 - 31.03.2021
+    |
+    |
+    .deposit-cart__depo 
+      | Deposit: 100 BNB  
+      span.green 16%
+    |
+    |
+    .deposit-cart__active 
+      |
+      |
+      .deposit-cart__checkbox
+        +uni-checkbox({
+          classes: '',
+          text: 'Capitalizacion of interest'
+        })
+      |
+      |  
+      a(href="#").deposit-cart__cancel Cancel deposit 
+    |
+    |
+    .deposit-cart__summs 
+      .summ 
+        | 5.290 
+        span.bnb BNB
+      .summ 
+        | 523 
+        span.bnb BNB
+    |
+    |
+    .deposit-cart__line 
+      .filler.filler--green.w-100
+    |
+    |
+    .popup-sure
+      .popup-sure__text 
+        | You can terminate this deposit 
+        br
+        | 80% of the deposit will be returned for withdrawal
+      .popup-sure__title Are you sure?
+      .popup-sure__btns
+        button.popup-sure__btn.btn-no 
+          span No
+        button.popup-sure__btn.btn-yes 
+          span Yes
+    |
+    |
+  |
+  |

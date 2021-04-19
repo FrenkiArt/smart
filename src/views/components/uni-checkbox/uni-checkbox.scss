@@ -1,0 +1,47 @@
+.uni-checkbox {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #a6b0c3;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+
+  .wrap-icon {
+    margin-right: 8px;
+  }
+
+  .icon-ok {
+    display: none;
+  }
+
+  .icon-no {
+    display: block;
+  }
+
+  input {
+    display: none;
+  }
+
+  input:checked ~ .text {
+    color: #3861fb;
+  }
+
+  input:checked ~ .wrap-icon .icon-ok {
+    display: block;
+  }
+
+  input:checked ~ .wrap-icon .icon-no {
+    display: none;
+  }
+}
+
+.uni-checkbox--underline {
+  @extend .uni-checkbox;
+
+  .text {
+    text-decoration: underline;
+    color: #3861fb;
+  }
+}

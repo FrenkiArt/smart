@@ -1,0 +1,24 @@
+mixin uni-checkbox(args) 
+  label.uni-checkbox(
+    class=args.classes
+  )
+    input(type="checkbox", name="")
+    .wrap-icon 
+      img(src="assets/svg/icon-checkbox-ok.svg", alt="" loading="lazy").icon-ok
+      img(src="assets/svg/icon-checkbox-no.svg", alt="" loading="lazy").icon-no
+    span.text=args.text
+
+//-+uni-checkbox({
+  classes: 'add class',
+  text: 'some text'
+  })
+
+mixin uni-checkbox-underline(args) 
+  label.uni-checkbox--underline(
+    class=args.classes
+  )
+    input(type="checkbox", name="")
+    .wrap-icon 
+      img(src="assets/svg/icon-checkbox-ok.svg", alt="" loading="lazy").icon-ok
+      img(src="assets/svg/icon-checkbox-no-empty.svg", alt="" loading="lazy").icon-no
+    span.text=args.text

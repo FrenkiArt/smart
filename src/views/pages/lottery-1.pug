@@ -1,0 +1,212 @@
+extends ../templates/_lottery.pug
+
+block title
+  title BNBSMART
+
+block basicSeo
+  meta(name='description' content='Description')
+  meta(name='keywords', content='')
+  meta(name='author' content='')
+
+block content
+  |
+  | 
+  .wrap-main
+    |
+    |
+    .container
+      | 
+      | 
+      .lottery
+        |
+        |
+        .lottery__header 
+          |
+          |
+          .lottery__title Lottery
+          |
+          |
+          .lottery__hint 
+            |
+            |
+            .title How it work?
+            |
+            |
+            ul.hint-content 
+              li 2% of all deposits go to the total lottery pot  
+              li After each deposit made you automatically become a participant   
+              li 
+                | in the lottery and receive tickets 
+                span.gray 0.05 BNB = 
+                span.orange 1 ticket
+              li Maximum 100 tickets for 1 deposit
+              li Every 24 hours the contract randomly selects 5 lucky tickets
+              li The total pot is divided between 5 participants who have these tickets
+            |
+            |
+          |
+          |
+        |
+        |
+        .lottery__toggler 
+          |
+          |
+          .uni-toggler.uni-toggler--1
+            |
+            |
+            .uni-toggler__item.active PAST DRAWS
+            |
+            |
+            .uni-toggler__item NEXT DRAW
+            |
+            |
+            .uni-toggler__text-filler.dn Alternate-text
+            |
+            |
+          |
+          |
+        |
+        |
+        .lottery__round 
+          span Round 
+          span.orange 26
+        | 
+        |
+        .lottery__countdown
+          |
+          |
+          .countdown(data-countdown="")
+            // example data-countdown="04/20/2021 06:00:07 PM"
+            |
+            |
+            #hours.countdown__hours
+              .countdown__number
+              .countdown__number
+            |
+            |
+            .countdown__dots
+              .dot
+              .dot
+            |
+            |
+            #minutes.countdown__minutes
+              .countdown__number
+              .countdown__number
+            |
+            |
+            .countdown__dots
+              .dot
+              .dot
+            |
+            |
+            #seconds.countdown__seconds 
+              .countdown__number
+              .countdown__number
+            |
+            |
+          |
+          |
+        |
+        |
+        ul.lottery__pots
+          |
+          |
+          li.pot
+            |
+            |
+            .pot__title Total Pot
+            |
+            |
+            .pot__cart 
+              .pot__inner
+                span.number 12.340 
+                span.bnb BNB
+          |
+          |
+          li.pot
+            |
+            |
+            .pot__title Total Tickets
+            |
+            |
+            .pot__cart.bg-orange
+              .number.white 9324 
+          |
+          |
+          li.pot
+            |
+            |
+            .pot__title Your Tickets
+            |
+            |
+            .pot__cart.bg-white
+              .pot__inner
+                span.number 257 - 289   
+                span.dark-grey (116)  
+              <svg width="8" height="14" class="arr">
+                <use xlink:href="./assets/svg/svg_sprite.svg#icon-arr-right"></use>
+              </svg>
+          |
+          |
+          li.pot
+            |
+            |
+            .pot__title Round Participants
+            |
+            |
+            .pot__cart.bg-lightblue
+              .number.blue 1 953 
+          |
+          |
+          li.pot
+            |
+            |
+            .pot__title Your chance
+            |
+            |
+            .pot__cart.bg-green
+              .number.green 2.95%
+          |
+          |
+        |
+        |
+        .your-stats
+          |
+          |
+          .your-stats__title Your stats
+          |
+          |
+          ul.stats-list 
+            |
+            |
+            li.stat-cart
+              .stat-cart__title Participation in rounds
+              .stat-cart__count.blue 3
+            |
+            |
+            li.stat-cart
+              .stat-cart__title Total tickets received
+              .stat-cart__count 289 
+            |
+            |
+            li.stat-cart
+              .stat-cart__title Round wins
+              .stat-cart__count.green 1  
+            |
+            |  
+            li.stat-cart
+              .stat-cart__title Earned on winnings
+              span.stat-cart__count 25.68 
+              span.bnb BNB
+            |
+            |  
+          |
+          |
+        |
+        | 
+      |
+      |  
+    |
+    | 
+  |
+  |  

@@ -52,7 +52,9 @@ html(lang='ru')
     |
     |
     include ../components/buttons/button.pug 
-    include ../components/tabs/tabs.pug  
+    include ../components/tabs/tabs.pug 
+    include ../components/uni-checkbox/uni-checkbox.pug 
+    include ../components/deposit-cart/deposit-cart.pug  
     include ../mixins/mixins.pug 
     |
     |
@@ -60,7 +62,8 @@ html(lang='ru')
       |
       |
       //- Header
-      include ../components/header/header.pug
+      .wrap-header
+        include ../components/header/header.pug
       //- Header/
       |
       |  
@@ -72,10 +75,7 @@ html(lang='ru')
       include ../components/footer/footer.pug
       //- Footer/
       |
-      |
-      include ../components/popup/popup.pug
-      |
-      |
+      | 
     |
     |
     //- block scripts

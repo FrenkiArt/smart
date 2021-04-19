@@ -1,10 +1,10 @@
 extends ../templates/_template.pug
 
 block title
-  title Заголовок
+  title BNBSMART
 
 block basicSeo
-  meta(name='description' content='Описание страницы')
+  meta(name='description' content='Description')
   meta(name='keywords', content='')
   meta(name='author' content='')
 
@@ -18,26 +18,67 @@ block content
       |
       |
       //- Desktop page
-      h1 Все страницы
+      h1 All pages
       |
       | 
       ul
         |
         | 
         li 
-          a(href="./index.html") index
+          a(href="./index.html").link index
         |
         | 
         li 
-          a(href="./lottery.html") lottery
+          a(href="./lottery.html").link lottery
         |
         | 
         li 
-          a(href="./launchtime.html") launchtime
+          a(href="./lottery-1.html").link lottery-1
         |
         | 
         li 
-          a(href="./referral.html") referral 
+          a(href="./lottery-2.html").link lottery-2
+        |
+        | 
+        li 
+          a(href="./launchtime.html").link launchtime
+        |
+        | 
+        li 
+          a(href="./referral.html").link referral 
+        |
+        |
+      |
+      |
+      ul 
+        |
+        |
+        li
+          button.noteError.link push message Error 
+        |
+        | 
+        li
+          button.noteOkay.link push message Okay
+        |
+        |
+        li
+          | examle message Error   
+          .exampleNote-error
+        |
+        |
+        li
+          | examle message Okay   
+          .exampleNote-ok
+        |
+        |
+        li
+          | for setting .countdown, you should set his data-countdown
+          br 
+          | example: 
+          br
+          | data-countdown="04/20/2021 06:00:07 PM"
+          br
+          | If you don't do it, it will automatically countdown 1 day by UTC.
         |
         |
       |

@@ -1,0 +1,438 @@
+.calc-profit {
+  padding: 25px 50px 50px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin: 0 0 50px;
+  position: relative;
+
+  @media screen and(max-width: 800px) {
+    padding: 22px 20px 30px;
+  }
+
+  @media screen and(max-width: 360px) {
+    padding: 22px 10px 30px;
+  }
+
+  // .calc-profit__title
+  &__title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 80px;
+    color: #222531;
+    margin-bottom: 5px;
+
+    @media screen and(max-width: 800px) {
+      font-size: 26px;
+      line-height: 39px;
+      margin-bottom: 16px;
+    }
+  }
+
+  // .calc-profit__subtitle
+  &__subtitle {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 8px;
+    color: #222531;
+
+    @media screen and(max-width: 800px) {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 15px;
+    }
+  }
+
+  // .calc-profit__wrap-amount-and-capital
+  &__wrap-amount-and-capital {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 575px;
+    margin-bottom: 20px;
+
+    @media screen and(max-width: 800px) {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  // .calc-profit__wrap-input
+  &__wrap-input {
+    background-color: #eff2f5;
+    border-radius: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    flex-direction: column;
+    max-width: 340px;
+    width: 100%;
+
+    @media screen and(max-width: 800px) {
+      margin-bottom: 18px;
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 18px;
+      color: #a6b0c3;
+    }
+
+    input {
+      color: #222531;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 33px;
+      text-align: center;
+      border: none;
+      background-color: transparent;
+
+      @media screen and(max-width: 800px) {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  // .calc-profit__capitalization
+  &__capitalization {
+    .tooltip {
+      width: 370px;
+
+      @media screen and(max-width: 800px) {
+        display: none;
+      }
+    }
+
+    .tooltip-trigger {
+      @media screen and(max-width: 800px) {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // .calc-profit__circle
+  &__circle {
+    width: 263px;
+    height: 263px;
+    border-radius: 100%;
+    flex-shrink: 0;
+    border: 8px solid #ff5b23;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 50px;
+    bottom: 57px;
+
+    @media screen and(max-width: 1350px) {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      margin-bottom: 20px;
+    }
+
+    @media screen and(max-width: 800px) {
+      width: 180px;
+      height: 180px;
+      margin: 60px auto 10px;
+      padding: 30px 5px 5px;
+      justify-content: center;
+    }
+  }
+
+  // .calc-profit__circle-title
+  &__circle-title {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    width: 105px;
+    color: #222531;
+
+    @media screen and(max-width: 800px) {
+      font-size: 16px;
+      line-height: 24px;
+      position: absolute;
+      width: 280px;
+      left: 50%;
+      top: -40px;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  // .calc-profit__circle-text
+  &__circle-text {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: 0.04em;
+    color: #222531;
+
+    @media screen and(max-width: 800px) {
+      font-size: 30px;
+      line-height: 45px;
+      margin-bottom: 10px;
+    }
+
+    .bnb {
+      font-size: 20px;
+      line-height: 30px;
+
+      @media screen and(max-width: 800px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  // .calc-profit__circle-withdraw
+  &__circle-withdraw {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+    color: #58667e;
+
+    @media screen and(max-width: 800px) {
+      font-size: 14px;
+      line-height: 130%;
+    }
+
+    .title {
+      color: #a6b0c3;
+      font-weight: 600;
+    }
+    /* .text {
+    } */
+  }
+
+  // .calc-profit__some-info
+  &__some-info {
+    position: absolute;
+    left: 675px;
+    transform: translate(0, -90px);
+
+    @media screen and(max-width: 1350px) {
+      left: 360px;
+      transform: translate(0, 0);
+      bottom: 160px;
+    }
+
+    @media screen and(max-width: 800px) {
+      margin-bottom: 30px;
+      position: relative;
+      left: auto;
+      bottom: auto;
+      text-align: center;
+    }
+  }
+
+  .daily-profit {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.04em;
+    color: #222531;
+
+    @media screen and(max-width: 800px) {
+      font-size: 18px;
+      line-height: 27px;
+
+      .orange {
+        font-size: 28px;
+        line-height: 42px;
+      }
+    }
+  }
+
+  .increase {
+    padding: 4px 12px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #a6b0c3;
+    margin-bottom: 8px;
+    background-color: #eff2f5;
+    border-radius: 6px;
+    display: inline-block;
+
+    @media screen and(max-width: 800px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .total-profit {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 6px;
+
+    @media screen and(max-width: 800px) {
+      font-size: 18px;
+      line-height: 27px;
+      margin-bottom: 14px;
+
+      .green {
+        font-size: 22px;
+        line-height: 33px;
+      }
+    }
+  }
+
+  .bonus-total-amount {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
+    color: #222531;
+  }
+
+  // .calc-profit__wrap-btn
+  &__wrap-btn {
+    width: 575px;
+
+    @media screen and(max-width: 800px) {
+      width: 100%;
+    }
+  }
+
+  // .calc-profit__btn
+  &__btn {
+    text-decoration: none;
+    height: 80px;
+    width: 100%;
+    background-color: #3861fb;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 20px rgba(56, 97, 251, 0.4);
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 39px;
+    text-align: center;
+    border: 2px solid #3861fb;
+    color: #ffffff;
+    transition: all 0.3s;
+
+    @media screen and(max-width: 800px) {
+      height: 66px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &:hover {
+      color: #3861fb;
+      background-color: #ffffff;
+    }
+  }
+}
+
+.periods {
+  background-color: #eff2f5;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @media screen and(max-width: 1050px) {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 -8px 20px;
+  }
+
+  @media screen and(max-width: 800px) {
+    margin: 0 0px 20px;
+  }
+
+  // .periods__item
+  &__item {
+    width: 170px;
+    height: 36px;
+    background-color: #eff2f5;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #58667e;
+    margin: 5px;
+    transition: all 0.3s;
+    position: relative;
+    padding: 5px;
+
+    @media screen and(max-width: 1050px) {
+      height: 28px;
+      font-size: 12px;
+      line-height: 18px;
+      border-radius: 8px;
+      margin: 4px;
+      width: calc(20% - 4px);
+    }
+
+    &.active {
+      background-color: #ffffff;
+    }
+
+    &.blue {
+      color: #3861fb;
+    }
+
+    .for-decktop {
+      display: inline;
+      white-space: nowrap;
+
+      @media screen and(max-width: 800px) {
+        display: none;
+      }
+    }
+
+    .for-mobile {
+      display: none;
+      white-space: nowrap;
+
+      @media screen and(max-width: 800px) {
+        display: inline;
+      }
+    }
+
+    .line-through {
+      opacity: 0.75;
+
+      @media screen and(max-width: 800px) {
+        display: none;
+      }
+    }
+  }
+
+  // .periods__info-icon
+  &__info-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 12px;
+    height: 12px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and(max-width: 800px) {
+      display: none;
+    }
+  }
+
+  // .periods__info-tooltip
+  &__info-tooltip {
+    width: 320px;
+
+    @media screen and(max-width: 1050px) {
+      transform: translate(-95%, 0);
+    }
+  }
+}

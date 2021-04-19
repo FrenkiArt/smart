@@ -7,23 +7,46 @@
   font-size: 16px;
   line-height: 24px;
   color: #58667e;
-  padding: 25px 0 50px;
+  padding: 25px 0 35px;
+
+  @media screen and(max-width: 800px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
 
   .container {
     display: flex;
     justify-content: space-between;
+
+    @media screen and(max-width: 800px) {
+      flex-direction: column;
+    }
   }
 
   .copyright {
     text-align: left;
+
+    @media screen and(max-width: 800px) {
+      text-align: center;
+      margin-bottom: 36px;
+    }
   }
 
   .audited {
     text-align: center;
+
+    @media screen and(max-width: 800px) {
+      margin-bottom: 36px;
+    }
   }
 
   .powered {
     text-align: right;
+
+    @media screen and(max-width: 800px) {
+      text-align: center;
+      margin-bottom: 36px;
+    }
   }
 
   a {

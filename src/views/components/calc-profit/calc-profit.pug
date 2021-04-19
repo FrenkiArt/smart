@@ -1,0 +1,125 @@
+|
+|
+.panel.calc-profit
+  |
+  |
+  .calc-profit__title Calculate Profit
+  |
+  |
+  .calc-profit__subtitle Choose Deposit Period
+  |
+  |
+  .periods
+    |
+    |
+    button.periods__item
+      span.for-decktop 3 DAYS
+      span.for-mobile 3 D      
+    |
+    |
+    button.periods__item 
+      span.for-decktop 7 DAYS
+      span.for-mobile 7 D 
+    |
+    |
+    button.periods__item.active.blue.with-tooltip
+      span.line-through 14 
+      span.for-decktop 12.5 DAYS
+      span.for-mobile 12.5 D
+      .periods__info-icon.tooltip-trigger
+        <svg width="12" height="12">
+          <use xlink:href="./assets/svg/svg_sprite.svg#icon-info"></use>
+        </svg> 
+        .periods__info-tooltip.tooltip 
+          | Decreases by 0.5 everyday (minimum day is 7)
+          | Profitability remains as in 14 days
+    |
+    |
+    button.periods__item.blue.with-tooltip
+      span.line-through 21    
+      span.for-decktop 19.5 DAYS
+      span.for-mobile 19.5 D 
+      .periods__info-icon.tooltip-trigger
+        <svg width="12" height="12">
+          <use xlink:href="./assets/svg/svg_sprite.svg#icon-info"></use>
+        </svg>
+        .periods__info-tooltip.tooltip 
+          | Decreases by 0.5 everyday (minimum day is 7)
+          | Profitability remains as in 14 days
+    |
+    |
+    button.periods__item.blue.with-tooltip
+      span.line-through 28  
+      span.for-decktop 26.5 DAYS
+      span.for-mobile 26.5 D
+      .periods__info-icon.tooltip-trigger
+        <svg width="12" height="12">
+          <use xlink:href="./assets/svg/svg_sprite.svg#icon-info"></use>
+        </svg>
+        .periods__info-tooltip.tooltip 
+          | Decreases by 0.5 everyday (minimum day is 7)
+          | Profitability remains as in 14 days
+    |
+    |
+  |
+  |
+  .calc-profit__wrap-amount-and-capital
+    |
+    |
+    .calc-profit__wrap-input 
+      .title Enter Deposit Amount
+      input(type="text", name="", value="10").input-number
+    |
+    |
+    .calc-profit__capitalization 
+      label.uni-checkbox--underline.tooltip-trigger
+        input(type="checkbox", name="")
+        .wrap-icon 
+          img(src="assets/svg/icon-checkbox-ok.svg", alt="" loading="lazy").icon-ok
+          img(src="assets/svg/icon-checkbox-no-empty.svg", alt="" loading="lazy").icon-no
+        span.text Capitalizacion of interest
+        .tooltip
+          .row The profitability is growing every day
+          .row 
+            span.gray Example: 
+            | deposit 10 BNB for 14 days (daily profit 9%)
+          .row On the first day you will earn 10 BNB + 9% = 10.9 BNB
+          .row On the second day 10.9 BNB + 9% = 11.88 BNB
+          .orange On the third day 11.88 + 9% = 12.95 BNB and so on You can withdraw only at the end of the deposit
+          .orange You can force withdrawal of 80% of the deposit 
+    |
+    |
+  |
+  | 
+  .calc-profit__circle 
+    .calc-profit__circle-title
+      | In 12.5 days you will get
+    .calc-profit__circle-text 
+      span.calc-profit__circle-summ 126.8 
+      span.bnb BNB 
+    .calc-profit__circle-withdraw 
+      .title Withdraw
+      .text Any Time
+  |
+  |
+  .calc-profit__some-info 
+    .daily-profit 
+      span DAILY PROFIT:  
+      span.orange 34%
+    .increase 
+      span.dark-grey +0.5% 
+      span increase every 24h
+    .total-profit   
+      span Total Profit: 
+      span.green 102%
+    .bonus-total-amount 
+      span Bonus to the total amount: 
+      span.gray NO
+  |
+  |
+  .calc-profit__wrap-btn
+    button.calc-profit__btn Create deposit
+  |
+  |
+|
+|

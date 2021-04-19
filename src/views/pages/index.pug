@@ -1,10 +1,10 @@
 extends ../templates/_template.pug
 
 block title
-  title Заголовок
+  title BNBSMART
 
 block basicSeo
-  meta(name='description' content='Описание страницы')
+  meta(name='description' content='Description')
   meta(name='keywords', content='')
   meta(name='author' content='')
 
@@ -81,10 +81,10 @@ block content
         |
       |
       |
-      .calc-profit
+      include ../components/calc-profit/calc-profit.pug
       |
       |
-      .dashboard
+      .panel.dashboard
         .dashboard__title Dashboard
         .dashboard__body
           .dashboard__big-cart 
@@ -169,42 +169,52 @@ block content
       |
       |
       .deposits-list 
-        .deposit-cart
-          .deposit-cart__number 14
-          .deposit-cart__date 10 DAYS, 21.03.2021 - 31.03.2021
-          .deposit-cart__depo 
-            | Deposit: 100 BNB  
-            span.green 16%
-          .deposit-cart__active
-            label
-              input(type="checkbox", name="")
-              span Capitalizacion of interest
-              .icon 
-                svg
-            a(href="#") Cansel deposit 
-          .deposit-cart__summs 
-            .summ 
-              | 5.290
-              span.bnb BNB
-            .summ 
-              | 523 BNB
-              span.bnb BNB
-          .deposit-cart__line 
-            .filler.filler--orange
-            .filler.filler--green
-          .popup-sure
-            .popup-sure__text 
-              | You can terminate this deposit 
-              br
-              | 80% of the deposit will be returned for withdrawal
-            .popup-sure__title Are you sure?
-            .popup-sure__btns
-              button.btn--red 
-                span No
-              button.btn--green 
-                span Yes
+        |
+        |
+        +deposit-cart() 
+        +deposit-cart() 
+        +deposit-cart() 
+        +deposit-cart-green()
+        +deposit-cart() 
+        +deposit-cart() 
+        +deposit-cart() 
+        +deposit-cart() 
+        +deposit-cart-green()
+        +deposit-cart() 
+        |
+        |
       |
       |
+    |
+    | 
+    //ul.notific
+      |
+      |
+      li.notific__item
+        .cart-info.error
+          button.cart-info__close 
+            img(src="assets/svg/icon-close-2.svg", alt="" loading="lazy")
+          .cart-info__wrap-icon 
+            img(src="assets/svg/icon-ok.svg", alt="" loading="lazy").cart-info__icon.ok
+            img(src="assets/svg/icon-error.svg", alt="" loading="lazy").cart-info__icon.err
+          .cart-info__inner 
+            .cart-info__title Error
+            .cart-info__text 
+              | Minimum withdraw is 0.05 BNB
+      |
+      | 
+      li.notific__item
+        .cart-info 
+          button.cart-info__close 
+            img(src="assets/svg/icon-close-2.svg", alt="" loading="lazy")
+          .cart-info__wrap-icon 
+            img(src="assets/svg/icon-ok.svg", alt="" loading="lazy").cart-info__icon
+          .cart-info__inner 
+            .cart-info__title
+              span.text Deposit 0.86 
+              span.bnb BNB
+            .cart-info__text 
+              a(href="#") View on bscscan
     |
     | 
   |

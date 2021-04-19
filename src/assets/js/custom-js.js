@@ -21,6 +21,46 @@ if (window.matchMedia('(max-width: 640px)').matches) {
 }
 
 /**
+ * Работа с саб-меню в навигации, которых
+ * теперь не видно из-за особенностей макета.
+ */
+if (document.querySelector('.submenu-parent')) {
+  document.querySelectorAll('.submenu-parent').forEach((item) => {
+    item.addEventListener('mouseenter', submenuOverHandler);
+  });
+
+  document.querySelectorAll('.submenu-parent').forEach((item) => {
+    item.addEventListener('mouseleave', submenuOutHandler);
+  });
+}
+
+function submenuOverHandler(e) {
+  // console.log('over');
+
+  const childSubmenu = e.target.querySelector('.submenu');
+  const posLeft =
+    e.target.getBoundingClientRect().left +
+    e.target.getBoundingClientRect().width / 2;
+  const posTop = e.target.getBoundingClientRect().bottom;
+
+  childSubmenu.classList.add('fixed');
+  childSubmenu.style.top = posTop + 'px';
+  childSubmenu.style.left = posLeft + 'px';
+}
+
+function submenuOutHandler(e) {
+  // console.log('out');
+
+  const childSubmenu = e.target.querySelector('.submenu');
+
+  childSubmenu.classList.remove('fixed');
+  /*  setTimeout(() => {
+    childSubmenu.style.top = 0 + 'px';
+    childSubmenu.style.left = 0 + 'px';
+  }, 300); */
+}
+
+/**
  * Счётчик времени
  * @param {*} dateEnd Дата конца счётчика
  */
@@ -141,4 +181,177 @@ function copyToClipboard(e) {
     .catch((err) => {
       console.log('Something went wrong', err);
     });
+}
+
+/* Таббер обычный */
+if (document.querySelector('.uni-toggler')) {
+  document.querySelectorAll('.uni-toggler__item').forEach((item) => {
+    item.addEventListener('click', clickToTogglerHandler);
+  });
+}
+
+function clickToTogglerHandler(e) {
+  const parent = e.target.closest('.uni-toggler');
+
+  document.querySelectorAll('.uni-toggler__item').forEach((item) => {
+    item.classList.remove('active');
+  });
+
+  this.classList.add('active');
+}
+
+class Notific {
+  constructor(args) {
+    this.ul = null;
+    this.titleHTML = args.titleHTML || '';
+    this.textHTML = args.textHTML || '';
+    this.error = args.error || false;
+    this.autodeleteTime = args.autodeleteTime || 5000;
+    this.autodelete = args.autodelete || false;
+
+    this.createCartTemplate = function () {
+      const cart = document.createElement('div');
+      cart.classList.add('cart-info');
+      cart.innerHTML = `
+        <button class="cart-info__close">
+          <img src="assets/svg/icon-close-2.svg" alt="" loading="lazy">
+        </button>
+        <div class="cart-info__wrap-icon">
+          <img src="assets/svg/icon-ok.svg" alt="" loading="lazy" class="cart-info__icon ok">
+          <img src="assets/svg/icon-error.svg" alt="" loading="lazy" class="cart-info__icon err">
+        </div> 
+        <div class="cart-info__inner">
+          <div class="cart-info__title">${this.titleHTML}</div>
+          <div class="cart-info__text">${this.textHTML}</div>
+        </div> 
+      `;
+      cart
+        .querySelector('.cart-info__close')
+        .addEventListener('click', this.closeHandler);
+
+      if (this.error) {
+        cart.classList.add('error');
+      }
+
+      return cart;
+    };
+
+    this.createUlTemplate = function () {
+      const ul = document.createElement('ul');
+      ul.classList.add('notific');
+      ul.addEventListener('click', function (e) {
+        if (e.target == this) {
+          ul.querySelector('.cart-info__close').click();
+        }
+      });
+      this.ul = ul;
+      return ul;
+    };
+
+    this.createLiTemplate = function () {
+      const li = document.createElement('li');
+      li.classList.add('notific__item');
+      return li;
+    };
+
+    this.displayUl = function () {
+      document.body.append(this.createUlTemplate());
+    };
+
+    this.closeHandler = function (e) {
+      const parentUl = e.target.closest('.notific');
+      const parentLi = e.target.closest('.notific__item');
+
+      parentLi.classList.add('remove-item');
+      setTimeout(() => {
+        parentLi.remove();
+
+        if (parentUl && parentUl.childElementCount === 0) {
+          parentUl.remove();
+        }
+      }, 500);
+    };
+
+    this.isNotificOnDisplay = function () {
+      if (document.querySelector('.notific')) {
+        return true;
+      } else {
+        return false;
+      }
+    };
+
+    this.pushNote = function () {
+      if (!this.isNotificOnDisplay()) {
+        this.displayUl();
+      }
+
+      let newItem = this.createLiTemplate();
+      newItem.append(this.createCartTemplate());
+
+      if (this.autodelete) {
+        setTimeout(() => {
+          newItem.querySelector('.cart-info__close').click();
+        }, this.autodeleteTime);
+      }
+
+      document.querySelector('.notific').append(newItem);
+    };
+  }
+}
+
+window.notifyFunc = function (args) {
+  const temp = new Notific(args);
+  temp.pushNote();
+};
+
+/* window.notifyFunc({
+  error: true,
+  titleHTML: 'TTTitle',
+  textHTML: 'Minimum withdraw is 0.05 BNB /n <a href="#">View on bscscan</a>',
+}); */
+
+if (document.querySelector('.noteError')) {
+  document.querySelector('.noteError').addEventListener('click', function () {
+    window.notifyFunc({
+      error: true,
+      titleHTML: 'Error',
+      textHTML: 'Minimum withdraw is 0.05 BNB',
+      autodelete: true,
+      autodeleteTime: 6000,
+    });
+  });
+}
+
+if (document.querySelector('.noteOkay')) {
+  document.querySelector('.noteOkay').addEventListener('click', function () {
+    window.notifyFunc({
+      error: false,
+      titleHTML:
+        '<span class="text">Deposit 0.86</span> <span class="bnb">BNB</span>',
+      textHTML: '<a href="#">View on bscscan</a>',
+    });
+  });
+}
+
+if (document.querySelector('.exampleNote-error')) {
+  document.querySelector('.exampleNote-error').textContent = `
+    window.notifyFunc({
+      error: true,
+      titleHTML: 'Error',
+      textHTML: 'Minimum withdraw is 0.05 BNB',
+      autodelete: true,
+      autodeleteTime: 6000,
+    });
+  `;
+}
+
+if (document.querySelector('.exampleNote-ok')) {
+  document.querySelector('.exampleNote-ok').textContent = `
+    window.notifyFunc({
+      error: false,
+      titleHTML:
+        '<span class="text">Deposit 0.86</span> <span class="bnb">BNB</span>',
+      textHTML: '<a href="#">View on bscscan</a>',
+    });
+  `;
 }

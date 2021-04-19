@@ -36,12 +36,12 @@ header#header.header
         span Help
       |
       |
-      .link--icon-right.presentation.submenu-parent
+      .link--icon-right.presentation.submenu-parent(data-parent1)
         span Presentation
         <svg width="8" height="8" class="icon">
           <use xlink:href="./assets/svg/svg_sprite.svg#icon-triangle"></use>
         </svg> 
-        ul.submenu 
+        ul.submenu(data-childred1)
           |
           |
           li.submenu__item
@@ -70,7 +70,7 @@ header#header.header
     |
     |
     .header__right
-      .link--orange.language.submenu-parent
+      .link--orange.language.submenu-parent(data-parent1)
         <svg width="20" height="20" class="big-icon">
           <use xlink:href="./assets/svg/svg_sprite.svg#icon-global"></use>
         </svg> 
@@ -78,7 +78,7 @@ header#header.header
         <svg width="8" height="8" class="icon">
           <use xlink:href="./assets/svg/svg_sprite.svg#icon-triangle"></use>
         </svg> 
-        ul.submenu 
+        ul.submenu(data-childred1)
           |
           |
           li.submenu__item
@@ -97,7 +97,7 @@ header#header.header
             a(href="#").submenu__link HI
           |
           |
-      .link--orange.social.submenu-parent
+      .link--orange.social.submenu-parent(data-parent1)
         <svg width="20" height="20" class="big-icon">
           <use xlink:href="./assets/svg/svg_sprite.svg#icon-tg"></use>
         </svg> 
@@ -105,7 +105,7 @@ header#header.header
         <svg width="8" height="8" class="icon">
           <use xlink:href="./assets/svg/svg_sprite.svg#icon-triangle"></use>
         </svg> 
-        ul.submenu 
+        ul.submenu(data-childred1) 
           |
           |
           li.submenu__item
@@ -122,8 +122,8 @@ header#header.header
   |
   .header__aside.right
     .avatar 
-      .avatar__number 0xE415...2709
-      //.avatar__btn
+      //.avatar__number 0xE415...2709
+      a(href="#").avatar__btn
         .bg
         span.inner Connect
         
