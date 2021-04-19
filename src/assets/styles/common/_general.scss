@@ -15,14 +15,14 @@ body {
 }
 
 body {
-  position: relative;
-  font-family: 'Kanit', sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 24px;
   background-color: #f5f6f9;
   color: #222531;
+  font-family: 'Kanit', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  position: relative;
 
   @media screen and(max-width: 800px) {
     font-size: 12px;
@@ -32,35 +32,34 @@ body {
 
 .page {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  min-height: 100vh;
+  flex-wrap: wrap;
   height: 100%;
-  //overflow-x: hidden;
+  min-height: 100vh;
 
   .header {
     width: 100%;
   }
   .wrap-main {
-    width: 100%;
     min-height: calc(100vh - 400px);
     padding: 62px 0 64px;
+    width: 100%;
 
     @media screen and(max-width: 800px) {
       padding: 42px 0 42px;
     }
   }
   .footer {
-    width: 100%;
     margin-top: auto;
+    width: 100%;
   }
 }
 
 .container {
-  position: relative;
-  max-width: 1300px;
-  width: 100%;
   margin: 0 auto;
+  max-width: 1300px;
+  position: relative;
+  width: 100%;
 
   @media screen and(max-width: 1350px) {
     max-width: calc(100% - 40px);
@@ -80,9 +79,9 @@ body {
 } */
 
 ul.list {
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  list-style-type: none;
 }
 
 img {
@@ -136,11 +135,11 @@ svg {
 }
 
 .uni-title {
-  font-weight: 500;
   font-size: 30px;
+  font-weight: 500;
   line-height: 45px;
-  text-align: center;
   margin: 15px 0 28px;
+  text-align: center;
 
   @media screen and(max-width: 800px) {
     font-size: 20px;
@@ -161,8 +160,8 @@ svg {
     margin: 0 10px 1px;
 
     @media screen and(max-width: 800px) {
-      width: calc(50% - 30px);
       margin: 0 10px 10px;
+      width: calc(50% - 30px);
     }
   }
 }
@@ -199,26 +198,26 @@ svg {
 }
 
 .simple-cart {
-  width: 350px;
   background-color: #ffffff;
   border-radius: 20px;
-  padding: 30px 40px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
   display: inline-block;
-  text-align: left;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  padding: 30px 40px;
   position: relative;
+  text-align: left;
+  width: 350px;
   z-index: 3;
 
   @media screen and(max-width: 800px) {
+    display: block;
     font-size: 16px;
     line-height: 18px;
+    max-width: 100%;
+    padding: 15px 30px;
     text-align: center;
     width: 260px;
-    padding: 15px 30px;
-    display: block;
-    max-width: 100%;
 
     span {
       white-space: nowrap;
@@ -238,11 +237,11 @@ svg {
     background-color: inherit;
     border-radius: inherit;
     content: '';
+    height: 100%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
     z-index: -1;
   }
 
@@ -250,11 +249,11 @@ svg {
     background: #e3e6ea;
     border-radius: inherit;
     content: '';
+    height: 100%;
+    left: 0;
     position: absolute;
     top: 4px;
-    left: 0;
     width: 100%;
-    height: 100%;
     z-index: -2;
   }
 
@@ -264,11 +263,11 @@ svg {
 
   // .simple-cart__count
   &__count {
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 42px;
-    letter-spacing: 0.04em;
     color: #222531;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    line-height: 42px;
 
     @media screen and(max-width: 800px) {
       font-size: 30px;
@@ -291,10 +290,10 @@ svg {
 
   // .dashboard__title
   &__title {
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 80px;
     color: #222531;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 80px;
     margin-bottom: 5px;
 
     @media screen and(max-width: 800px) {
@@ -306,8 +305,8 @@ svg {
 
   // .dashboard__body
   &__body {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-between;
 
     @media screen and(max-width: 1000px) {
@@ -317,12 +316,12 @@ svg {
 
   // .dashboard__big-cart
   &__big-cart {
-    background: #ffffff;
-    box-shadow: 0px 4px 20px rgba(88, 102, 126, 0.15);
-    border-radius: 20px;
-    padding: 22px 20px 20px;
-    flex-shrink: 0;
     // width: 575px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px rgba(88, 102, 126, 0.15);
+    flex-shrink: 0;
+    padding: 22px 20px 20px;
     width: calc(100% - (278px * 2 + 20px * 2) - 50px);
 
     @media screen and(max-width: 1300px) {
@@ -330,8 +329,8 @@ svg {
     }
 
     @media screen and(max-width: 1000px) {
-      width: auto;
       margin-bottom: 40px;
+      width: auto;
     }
 
     @media screen and(max-width: 800px) {
@@ -344,10 +343,10 @@ svg {
     }
 
     .title {
-      font-weight: normal;
-      font-size: 20px;
-      line-height: 30px;
       color: #222531;
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 30px;
 
       @media screen and(max-width: 800px) {
         font-size: 16px;
@@ -359,22 +358,22 @@ svg {
     }
 
     .count {
-      font-weight: bold;
-      font-size: 40px;
-      line-height: 40px;
-      letter-spacing: 0.04em;
       color: #222531;
+      font-size: 40px;
+      font-weight: bold;
+      letter-spacing: 0.04em;
+      line-height: 40px;
 
       @media screen and(max-width: 800px) {
         font-size: 30px;
-        line-height: 45px;
         letter-spacing: 0.02em;
+        line-height: 45px;
       }
     }
 
     .bnb {
-      font-weight: bold;
       font-size: 26px;
+      font-weight: bold;
       line-height: 39px;
 
       @media screen and(max-width: 800px) {
@@ -384,39 +383,39 @@ svg {
     }
 
     .text {
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 130%;
       color: #a6b0c3;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 130%;
       margin-bottom: 18px;
 
       @media screen and(max-width: 800px) {
-        margin-bottom: 24px;
         font-size: 12px;
         line-height: 130%;
+        margin-bottom: 24px;
       }
     }
 
     .big-btn {
-      height: 80px;
+      align-items: center;
       background-color: #eff2f5;
       border-radius: 10px;
-      font-weight: 600;
+      color: #222531;
+      cursor: pointer;
+      display: flex;
       font-size: 26px;
+      font-weight: 600;
+      height: 80px;
+      justify-content: center;
       line-height: 39px;
       text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #222531;
       text-decoration: none;
-      cursor: pointer;
       transition: all 0.3s;
       width: 100%;
 
       @media screen and(max-width: 800px) {
-        height: 66px;
         font-size: 20px;
+        height: 66px;
         line-height: 30px;
       }
 
@@ -446,18 +445,18 @@ svg {
   } */
 
   .stats-list {
-    flex-wrap: wrap;
-    width: calc(278px * 2 + 20px * 2);
-    margin: 0 -10px;
     flex-shrink: 0;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    width: calc(278px * 2 + 20px * 2);
 
     @media screen and(max-width: 1300px) {
       width: calc(230px * 2 + 20px * 2);
     }
 
     @media screen and(max-width: 800px) {
-      border: none;
       background-color: transparent;
+      border: none;
     }
 
     .stat-cart:nth-of-type(3),
@@ -471,21 +470,21 @@ svg {
   }
 
   .stat-cart {
-    width: 278px;
-    padding: 25px 30px;
     margin: 0 10px 20px;
+    padding: 25px 30px;
+    width: 278px;
 
     @media screen and(max-width: 1300px) {
       width: 230px;
     }
 
     @media screen and(max-width: 800px) {
-      margin: 0 5px 10px;
-      text-align: left;
       background: #ffffff;
-      border: 2px solid #eef1f4;
       border-radius: 10px;
+      border: 2px solid #eef1f4;
+      margin: 0 5px 10px;
       padding: 9px 16px;
+      text-align: left;
       width: 160px;
     }
 
@@ -505,8 +504,8 @@ svg {
     }
 
     .stat-cart__count {
-      font-weight: 600;
       font-size: 30px;
+      font-weight: 600;
       line-height: 30px;
 
       @media screen and(max-width: 800px) {
@@ -516,8 +515,8 @@ svg {
     }
 
     .bnb {
-      font-weight: 600;
       font-size: 20px;
+      font-weight: 600;
       line-height: 30px;
 
       @media screen and(max-width: 800px) {
@@ -542,57 +541,57 @@ svg {
   }
 
   .deposit-cart {
-    width: calc(100% / 12 * 4 - 30px);
     margin: 0 15px 30px;
+    width: calc(100% / 12 * 4 - 30px);
 
     @media screen and(max-width: 1200px) {
-      width: calc(100% / 12 * 6 - 30px);
       margin: 0 15px 30px;
+      width: calc(100% / 12 * 6 - 30px);
     }
 
     @media screen and(max-width: 900px) {
-      width: calc(100% / 12 * 6 - 20px);
       margin: 0 10px 20px;
+      width: calc(100% / 12 * 6 - 20px);
     }
 
     @media screen and(max-width: 800px) {
-      width: 100%;
       margin: 0 10px 12px;
       max-width: 360px;
+      width: 100%;
     }
   }
 }
 
 .notific {
-  position: fixed;
   bottom: 0;
   left: 0;
-  margin: 0;
-  padding: 20px;
   list-style-type: none;
-  z-index: 3;
-  transition: all 0.3s;
+  margin: 0;
   max-height: 100vh;
   overflow: hidden hidden;
+  padding: 20px;
+  position: fixed;
+  transition: all 0.3s;
+  z-index: 3;
 
   @media screen and(max-width: 800px) {
+    align-items: center;
+    backdrop-filter: blur(20px);
+    background: rgba(245, 246, 249, 0.75);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
     padding: 27px;
     position: fixed;
     width: 100%;
-    height: 100%;
-    background: rgba(245, 246, 249, 0.75);
-    backdrop-filter: blur(20px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
   // .notific__item
   &__item {
+    animation: fade-in 0.3s linear 0s 1 forwards;
     margin: 20px 0 0;
     transition: all 0.3s;
-    animation: fade-in 0.3s linear 0s 1 forwards;
   }
 
   .notific__item:first-of-type {
@@ -605,24 +604,24 @@ svg {
 }
 
 .cart-info {
-  color: #222531;
-  width: 320px;
-  min-height: 100px;
-  background-color: #ffffff;
-  box-shadow: 0px 4px 20px rgba(88, 102, 126, 0.15);
-  border-radius: 20px;
-  padding: 24px 40px 27px 20px;
-  display: flex;
   align-items: center;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(88, 102, 126, 0.15);
+  color: #222531;
+  display: flex;
   margin: 0;
+  min-height: 100px;
+  padding: 24px 40px 27px 20px;
   position: relative;
+  width: 320px;
 
   // .cart-info__wrap-icon
   &__wrap-icon {
-    margin-right: 20px;
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-right: 20px;
   }
 
   // .cart-info__icon
@@ -642,29 +641,29 @@ svg {
 
   // .cart-info__title
   &__title {
-    font-weight: 500;
     font-size: 20px;
+    font-weight: 500;
     line-height: 30px;
   }
 
   // .cart-info__text
   &__text {
-    font-weight: normal;
     font-size: 14px;
+    font-weight: normal;
     line-height: 21px;
   }
 
   // .cart-info__close
   &__close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px;
-    cursor: pointer;
+    align-items: center;
     border-radius: 100%;
+    cursor: pointer;
     display: inline-flex;
     justify-content: center;
-    align-items: center;
+    padding: 5px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
   }
 
   &.error {
@@ -682,8 +681,8 @@ svg {
   }
 
   a {
-    text-decoration: none;
     color: #3861fb;
+    text-decoration: none;
     transition: all 0.3s;
 
     &:hover {
@@ -692,58 +691,58 @@ svg {
   }
 
   &::before {
-    content: '';
-    position: absolute;
-    left: 20px;
-    bottom: 7px;
-    width: 204px;
-    height: 4px;
     background-color: #eff2f5;
     border-radius: 20px;
+    bottom: 7px;
+    content: '';
+    height: 4px;
+    left: 20px;
+    position: absolute;
+    width: 204px;
   }
 }
 
 .uni-toggler {
-  display: inline-flex;
   align-items: center;
+  border-radius: 100px;
+  display: inline-flex;
   justify-content: center;
   padding: 0px 0px;
-  border-radius: 100px;
   position: relative;
   z-index: 2;
 
   // .uni-toggler__item
   &__item {
-    width: 180px;
-    height: 36px;
-    display: inline-flex;
-    justify-content: center;
     align-items: center;
-    margin: 5px 5px;
-    font-weight: 500;
-    font-size: 16px;
     border-radius: 100px;
-    line-height: 24px;
-    cursor: pointer;
     color: #58667e;
-    transition: all 0.3s;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 500;
+    height: 36px;
+    justify-content: center;
+    line-height: 24px;
+    margin: 5px 5px;
     text-decoration: none;
+    transition: all 0.3s;
+    width: 180px;
   }
 
   // .uni-toggler__text-filler
   &__text-filler {
-    background-color: #ffffff;
-    border: 4px solid #eef1f4;
-    border-radius: 100px;
-    height: 60px;
-    width: 394px;
-    display: inline-flex;
-    justify-content: center;
     align-items: center;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 27px;
+    background-color: #ffffff;
+    border-radius: 100px;
+    border: 4px solid #eef1f4;
     color: #222531;
+    display: inline-flex;
+    font-size: 18px;
+    font-weight: normal;
+    height: 60px;
+    justify-content: center;
+    line-height: 27px;
+    width: 394px;
 
     &.dn {
       display: none;
@@ -765,9 +764,9 @@ svg {
     @media screen and(max-width: 800px) {
       border-radius: 8px;
       font-size: 12px;
+      height: 28px;
       line-height: 18px;
       width: 93px;
-      height: 28px;
     }
 
     &.active {
@@ -781,14 +780,14 @@ svg {
   max-width: 100%;
 
   .uni-toggler__item {
-    width: 197px;
     height: 50px;
+    width: 197px;
 
     @media screen and(max-width: 800px) {
-      width: 142px;
-      height: 35px;
       font-size: 12px;
+      height: 35px;
       line-height: 18px;
+      width: 142px;
     }
 
     &.active {
@@ -798,26 +797,26 @@ svg {
   }
 
   &::before {
+    background-color: #fff;
+    border-radius: 100px;
     content: '';
+    height: 100%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background-color: #fff;
     z-index: -1;
-    border-radius: 100px;
   }
 
   &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 64px;
     background: #e3e7ea;
     border-radius: 100px;
+    content: '';
+    height: 64px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
     z-index: -2;
 
     @media screen and(max-width: 800px) {
@@ -833,14 +832,14 @@ svg {
 }
 
 .swiper-alt-carts {
-  pointer-events: none;
   //width: 880px;
-  width: calc(160px * 5 + 20px * 4);
   max-width: 100%;
+  pointer-events: none;
+  width: calc(160px * 5 + 20px * 4);
 
   @media screen and(max-width: 1050px) {
-    width: calc(160px * 4 + 20px * 3);
     pointer-events: auto;
+    width: calc(160px * 4 + 20px * 3);
   }
 
   @media screen and(max-width: 860px) {
@@ -863,8 +862,8 @@ svg {
   }
 
   .swiper-pagination {
-    display: none;
     bottom: 0px;
+    display: none;
 
     @media screen and(max-width: 1050px) {
       display: block;
@@ -873,65 +872,65 @@ svg {
 }
 
 .alt-cart {
-  color: #000000;
-  text-align: center;
-  padding: 19px 23px 11px;
-  width: 160px;
-  border: 3px solid #eef1f4;
   border-radius: 20px;
+  border: 3px solid #eef1f4;
+  color: #000000;
   margin: 0 10px 20px;
+  padding: 19px 23px 11px;
+  text-align: center;
+  width: 160px;
 
   // .alt-cart__green
   &__green {
-    background-color: rgba(22, 199, 132, 0.1);
-    margin-bottom: 1px;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 27px;
-    color: #16c784;
-    border-radius: 100px;
-    height: 36px;
-    display: flex;
     align-items: center;
+    background-color: rgba(22, 199, 132, 0.1);
+    border-radius: 100px;
+    color: #16c784;
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    height: 36px;
     justify-content: center;
+    line-height: 27px;
+    margin-bottom: 1px;
   }
 
   // .alt-cart__range
   &__range {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 18px;
     color: #a6b0c3;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
     margin-bottom: 9px;
   }
 
   // .alt-cart__percent
   &__percent {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
     color: #3861fb;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
     margin-bottom: 6px;
   }
 
   // .alt-cart__count
   &__count {
-    font-weight: 600;
     font-size: 20px;
+    font-weight: 600;
     line-height: 30px;
 
     .bnb {
-      font-weight: bold;
       font-size: 12px;
+      font-weight: bold;
       line-height: 18px;
     }
   }
 }
 
 .pot {
-  text-align: center;
   color: #222531;
   margin: 0 15px 50px;
+  text-align: center;
 
   @media screen and(max-width: 800px) {
     margin: 0 auto 30px;
@@ -939,8 +938,8 @@ svg {
 
   // .pot__title
   &__title {
-    font-weight: normal;
     font-size: 18px;
+    font-weight: normal;
     line-height: 27px;
     margin-bottom: 11px;
 
@@ -953,28 +952,28 @@ svg {
 
   // .pot__cart
   &__cart {
-    width: 200px;
-    height: 50px;
-    display: inline-flex;
-    justify-content: center;
     align-items: center;
     background-color: #eff2f5;
     border-radius: 100px;
+    display: inline-flex;
+    height: 50px;
+    justify-content: center;
     position: relative;
+    width: 200px;
 
     @media screen and(max-width: 800px) {
-      width: 137px;
       height: 36px;
+      width: 137px;
     }
 
     &.bg-orange {
-      color: #ffffff;
       background-color: #ff5b23;
+      color: #ffffff;
     }
 
     &.bg-white {
-      border: 4px solid #eef1f4;
       background-color: #ffffff;
+      border: 4px solid #eef1f4;
     }
 
     &.bg-lightblue {
@@ -991,8 +990,8 @@ svg {
   }
 
   .number {
-    font-weight: 600;
     font-size: 20px;
+    font-weight: 600;
     line-height: 30px;
 
     @media screen and(max-width: 800px) {
@@ -1023,10 +1022,10 @@ svg {
 
   // .your-stats__title
   &__title {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 36px;
     color: #222531;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
     margin-bottom: 15px;
 
     @media screen and(max-width: 800px) {
@@ -1038,31 +1037,31 @@ svg {
 }
 
 .select {
-  color: #a6b0c3;
-  text-align: center;
   background: #eff2f5;
   border-radius: 100px;
-  padding: 7px 20px 3px;
-  min-width: 260px;
+  color: #a6b0c3;
   display: inline-block;
+  min-width: 260px;
+  padding: 7px 20px 3px;
+  text-align: center;
 
   @media screen and(max-width: 800px) {
     border-radius: 10px;
-    padding: 9px 10px 10px;
     min-width: 220px;
+    padding: 9px 10px 10px;
   }
 
   // .select__title
   &__title {
-    font-weight: 500;
     font-size: 12px;
+    font-weight: 500;
     line-height: 18px;
   }
 
   // .select__number
   &__number {
-    font-weight: 600;
     font-size: 22px;
+    font-weight: 600;
     line-height: 33px;
 
     @media screen and(max-width: 800px) {
@@ -1074,18 +1073,18 @@ svg {
 
 .tooltip-trigger {
   &::before {
-    width: 14px;
-    height: 14px;
     background-color: #ffffff;
     border-radius: 2px;
-    transform: translate(-50%, 0) rotate(-45deg);
-    content: '';
-    position: absolute;
-    left: 50%;
     bottom: calc(100% + 5px);
-    z-index: 4;
+    content: '';
+    height: 14px;
+    left: 50%;
     opacity: 0;
+    position: absolute;
+    transform: translate(-50%, 0) rotate(-45deg);
     transition: opacity 0.3s;
+    width: 14px;
+    z-index: 4;
   }
 
   &:hover {
@@ -1100,25 +1099,25 @@ svg {
 }
 
 .tooltip {
-  display: inline-block;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 21px;
-  padding: 12px 16px;
-  color: #222531;
   background-color: #ffffff;
-  box-shadow: 0px 4px 20px rgba(88, 102, 126, 0.15);
   border-radius: 10px;
-  position: absolute;
-  z-index: 3;
-  left: 50%;
   bottom: calc(100% + 10px);
-  transform: translate(-25%, 0);
-  text-align: left;
-  pointer-events: none;
+  box-shadow: 0px 4px 20px rgba(88, 102, 126, 0.15);
+  color: #222531;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  left: 50%;
+  line-height: 21px;
   opacity: 0;
-  transition: opacity 0.3s;
+  padding: 12px 16px;
+  pointer-events: none;
+  position: absolute;
+  text-align: left;
   text-decoration: none;
+  transform: translate(-25%, 0);
+  transition: opacity 0.3s;
+  z-index: 3;
 
   &:hover {
     opacity: 1;

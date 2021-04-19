@@ -6,11 +6,11 @@
 
   // .tabs__item
   &__item {
-    position: relative;
-    text-decoration: none;
+    align-items: center;
     display: inline-flex;
     justify-content: center;
-    align-items: center;
+    position: relative;
+    text-decoration: none;
     transition: all 0.3s;
 
     &.active {
